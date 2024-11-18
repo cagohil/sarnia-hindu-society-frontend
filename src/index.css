@@ -9,11 +9,11 @@ html{
 @font-face {
   font-family: Georgia;
   src: local("Georgia"),
-  url("./fonts/Georgia.ttf") format("truetype");
+  url("./assets/fonts/Georgia.ttf") format("truetype");
 }
 
 body {
-  background: #edd698 url(./images/bg-home.jpg) no-repeat top center fixed !important;
+  background: #edd698 url(./assets/images/bg-home.jpg) no-repeat top center fixed !important;
     margin: 0px;
     font-family: Georgia, "Times New Roman", Times, serif;
     color: #000000 !important;
@@ -112,7 +112,7 @@ code {
 }
 
 .bg-home{
-  background-image: url(./images/bg-home.jpg);
+  background-image: url(./assets/images/bg-home.jpg);
 }
 
   /* .about-main-carsoul{ */
@@ -525,7 +525,7 @@ border-top: 1px solid #ad603a;
  }
 
  .navbar2{
-  background: #edd698 url(./images/bg-home.jpg) !important;
+  background: #edd698 url(./assets/images/bg-home.jpg) !important;
  }
   .input-connect2{
     padding: 2px 17px;

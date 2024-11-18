@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useContext, useState } from "react";
-import imageContext from "../../context/imageContext";
+import imageContext from "../../context/gallery/ImageContext";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Modal from 'react-bootstrap/Modal';
@@ -17,7 +17,7 @@ function imageitem(props) {
 
   // const host = "http://localhost:8000";
   // const host = "http://3.15.117.216:8000";
-  const host = "https://sarniahindusociety.org:8000";
+  const host = "https://sarnia.vercel.app";
 
   const backgroundStyle = {
     maxHeight: '300px',

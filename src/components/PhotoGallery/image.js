@@ -6,7 +6,7 @@ import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import ImageItem from "./imageitem";
-import imageContext from "../../context/imageContext";
+import imageContext from "../../context/gallery/ImageContext";
 
 
 
@@ -17,7 +17,7 @@ function image() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [images, setPhoto] = React.useState({ title: "", image: "" });
-  const host = "https://sarniahindusociety.org:8000";
+  const host = "https://sarnia.vercel.app";
 
 
   const upadate = useRef(null)

@@ -1,7 +1,7 @@
 import React from "react";
 import AddImage from "./addimage";
 import Image from "./image";
-import deepa from "../../images/deepa.png"
+import deepa from "../../assets/images/deepa.png"
 
 const photogallery = () => {
   return (

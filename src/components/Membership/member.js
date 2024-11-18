@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import memberContext from "../../context/memberContext";
+import memberContext from "../../context/member/MemberContext";
 import MemberItem from "./memberitem";
 
 function member() {
@@ -15,7 +15,7 @@ function member() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [members, setMembers] = React.useState({ memberimage: "", name:"", designation:"", about:""});
-  const host = "https://sarniahindusociety.org:8000";
+  const host = "https://sarnia.vercel.app";
 
 
   useEffect(() => {

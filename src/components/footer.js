@@ -9,7 +9,6 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-
 const handleClick = (e) => {
     window.scroll(0, 0)
 }
@@ -22,6 +21,8 @@ const Footer = () => {
         window.scroll(0, 0);
         toast.success('Logout Successfully !');
     }
+    const today = new Date();
+    const year = today.getFullYear();
     return (
         <footer>
             <div className="bg-darka">
@@ -49,7 +50,7 @@ const Footer = () => {
                                     <li className="li-footer p1"><Link onClick={handleClick} to="/schedule" className="a-fff"><i className="fa-solid fa-angle-right"></i> Schedule</Link></li>
                                     <li className="li-footer p1"><Link onClick={handleClick} to="/membership" className="a-fff"><i className="fa-solid fa-angle-right"></i> Membership </Link></li>
                                     <li className="li-footer p1"><Link onClick={handleClick} to="/gallery" className="a-fff"><i className="fa-solid fa-angle-right"></i> Gallery</Link></li>
-                                    <li className="li-footer p1"><Link onClick={handleClick} to="/aarti" className="a-fff"><i className="fa-solid fa-angle-right"></i> Aarti</Link></li>
+                                    <li className="li-footer p1"><Link onClick={handleClick} to="/aarti-audios" className="a-fff"><i className="fa-solid fa-angle-right"></i> Aarti</Link></li>
                                     <li className="li-footer p1"><Link onClick={handleClick} to="/donation" className="a-fff"><i className="fa-solid fa-angle-right"></i> Donation</Link></li>
                                 </ul></div>
                         </Col>
@@ -57,7 +58,6 @@ const Footer = () => {
                             <div style={{ marginLeft: '20px' }}>
                                 <h5 className="text-uppercase pt-2 font-weight-normal">Get in Touch</h5>
                                 <ul className="ul-li-remove">
-                                    <li className="li-footer a-bbb2"><a href="tel:000-000-0000" className="a-fff">+1 000-000-0000</a></li>
                                     <li className="li-footer a-bbb2"><a href="mailto:sarniahindusociety@yahoo.ca" className="a-fff">sarniahindusociety@yahoo.ca</a></li>
                                     <li className="li-footer a-bbb2"><a href="https://www.google.com/maps/place/217+College+Ave+N,+Sarnia,+ON+N7T+6B5,+Canada/@42.9746337,-82.4041141,17z/data=!3m1!4b1!4m5!3m4!1s0x88259cc5b5978ccf:0x22020c816248f77a!8m2!3d42.9746337!4d-82.4019201" rel="noopener noreferrer" target='_blank' className="a-fff">217 College Ave North, Sarnia,<br /> Ontario, N7T 6B5</a></li>
                                     <li>
@@ -83,8 +83,8 @@ const Footer = () => {
             </div>
             <div className="bg-black bottemFooter">
                 <Container>
-                    <p className="p-2 m-0 text-center" ><Link onClick={handleClick} to="/">SARNIA HINDU SOCIETY</Link> - Copyright &copy; 2023. Design by <a
-                        href="https://www.exultitsolution.com/" target="_blank" rel="noopener noreferrer">EXULT IT SOLUTION
+                    <p className="p-2 m-0 text-center" ><Link onClick={handleClick} to="/">SARNIA HINDU SOCIETY</Link> Copyright &copy; {year}. Design by <a
+                        href="https://www.exultitsolution.com/" target="_blank" rel="noopener noreferrer">- EXULT IT SOLUTION
                     </a></p>
                 </Container>
             </div>

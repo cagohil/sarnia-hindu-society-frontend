@@ -1,8 +1,8 @@
 import React from "react";
 import Member from "./member";
-import deepa from "../../images/deepa.png"
+import deepa from "../../assets/images/deepa.png"
 import AddMember from "./addmember";
-import MembershipInfo from "../InfoComponents/membershipinfo"
+import MembershipInfo from "../InfoComponents/memberShipInfo"
 
 const membership = () => {
   return (

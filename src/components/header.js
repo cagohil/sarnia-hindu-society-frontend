@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { debounce } from '../utilities/helpers';
-import logo from '../images/logo.png';
+import logo from '../assets/images/logo.png';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import {LinkContainer} from 'react-router-bootstrap'
@@ -65,7 +65,7 @@ const Header = () => {
               <LinkContainer to="/"><Nav.Link className='linkOne'>Home</Nav.Link></LinkContainer>
 
               <NavDropdown className='linktwo' title="About Us" id="basic-nav-dropdown">
-              <LinkContainer  to="/sarniacity">
+              <LinkContainer  to="/about-city-of-sarnia">
               <NavDropdown.Item ><i className="fa-solid fa-angle-right pr-2"></i>About City Of Sarnia</NavDropdown.Item>
               </LinkContainer>
               <LinkContainer  to="/what-we-do">
@@ -82,10 +82,10 @@ const Header = () => {
               <LinkContainer  to="/education">
               <NavDropdown.Item ><i className="fa-solid fa-angle-right pr-2"></i>Education</NavDropdown.Item>
               </LinkContainer>
-              <LinkContainer  to="/aarti">
+              <LinkContainer  to="/aarti-audios">
               <NavDropdown.Item ><i className="fa-solid fa-angle-right pr-2"></i>Aarti Audios</NavDropdown.Item>
               </LinkContainer>
-              <LinkContainer  to="/bhajan">
+              <LinkContainer  to="/shs-bhajan-book">
               <NavDropdown.Item ><i className="fa-solid fa-angle-right pr-2"></i>SHS Bhajan book</NavDropdown.Item>
               </LinkContainer>
               </NavDropdown>
@@ -111,7 +111,7 @@ const Header = () => {
             <Nav className='nav-link2 navbarHeight'>
               <LinkContainer onClick={handleClick} to="/"><Nav.Link className='linkOne'>Home</Nav.Link></LinkContainer>
               <NavDropdown className='linktwo' title="About Us" id="basic-nav-dropdown">
-              <LinkContainer  to="/sarniacity">
+              <LinkContainer  to="/about-city-of-sarnia">
               <NavDropdown.Item ><i className="fa-solid fa-angle-right pr-2"></i>About City Of Sarnia</NavDropdown.Item>
               </LinkContainer>
               <LinkContainer onClick={handleClick} to="/what-we-do">
@@ -128,10 +128,10 @@ const Header = () => {
               <LinkContainer onClick={handleClick} to="/education">
               <NavDropdown.Item ><i className="fa-solid fa-angle-right pr-2"></i>Education</NavDropdown.Item>
               </LinkContainer>
-              <LinkContainer onClick={handleClick} to="/aarti">
+              <LinkContainer onClick={handleClick} to="/aarti-audios">
               <NavDropdown.Item ><i className="fa-solid fa-angle-right pr-2"></i>Aarti Audios</NavDropdown.Item>
               </LinkContainer>
-              <LinkContainer onClick={handleClick} to="/bhajan">
+              <LinkContainer onClick={handleClick} to="/shs-bhajan-book">
               <NavDropdown.Item ><i className="fa-solid fa-angle-right pr-2"></i>SHS Bhajan book</NavDropdown.Item>
               </LinkContainer>
               </NavDropdown>

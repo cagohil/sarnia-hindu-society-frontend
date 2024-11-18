@@ -2,30 +2,36 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/header";
-import Home from "./components/home";
 import Footer from "./components/footer";
-import BoardOfDirectors from "./components/InfoComponents/boardOfDirectors";
-import WhatWeDo from "./components/InfoComponents/whatWeDo";
-import Contact from "./components/Contact/contactus";
-import Aarti from "./components/aarti";
-import Donation from "./components/InfoComponents/donation";
-import Events from "./components/UpcomingEvents/mainevent";
-import Schedule from "./components/Schedule/mainschedule";
-import Education from "./components/InfoComponents/education";
 import PhotoGallery from "./components/PhotoGallery/photogallery";
-import Login from "./components/login";
-import SarniaCity from "./components/InfoComponents/sarniacity";
-import BhajanBook from "./components/bhajanbook"
+
+
+import Home from "./pages";
+import AboutCityOfSarnia from "./pages/about-city-of-sarnia";
+import WhatWeDo from "./pages/what-we-do";
+import BoardOfDirectors from "./pages/board-of-directors";
+import Education from "./pages/education";
+import AartiAudios from "./pages/aarti-audios";
+import SHSBhajanBook from "./pages/shs-bhajan-book"
+import Schedule from "./pages/monthly-mandir-schedule";
+
+
+import Events from "./pages/upcoming-events";
+import Login from "./pages/login";
+import Donation from "./pages/donation";
+import Contact from "./pages/contact";
 
 // Browser Router
 import { Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Membership from "./components/Membership/membership";
-import EventState from "./context/EventState";
-import ImageState from "./context/ImageState";
-import MemberState from "./context/memberState";
-import ScheduleState from "./context/scheduleState";
+
+
+import EventState from "./context/event/EventState";
+import ImageState from "./context/gallery/ImageState";
+import MemberState from "./context/member/MemberState";
+import ScheduleState from "./context/schedule/ScheduleState";
 
 
 function App() {
@@ -41,22 +47,23 @@ function App() {
               <main>
                 <Routes>
                   <Route path="/" element={<Home />} />
-                  <Route
-                    path="/board-of-directors-and-other-function"
-                    element={<BoardOfDirectors />}
-                  />
-                  <Route path="/login" element={<Login />} />
-                  <Route path="/what-we-do" element={<WhatWeDo />} />
                   <Route path="/contact" element={<Contact />} />
-                  <Route path="/aarti" element={<Aarti />} />
-                  <Route path="/bhajan" element={<BhajanBook />} />
-                  <Route path="/donation" element={<Donation />} />
                   <Route path="/events" element={<Events />} />
-                  <Route path="/education" element={<Education />} />
                   <Route path="/schedule" element={<Schedule />} />
                   <Route path="/membership" element={<Membership />} />
                   <Route path="/gallery" element={<PhotoGallery />} />
-                  <Route path="/sarniacity" element={<SarniaCity />} />
+
+
+                  <Route path="/about-city-of-sarnia" element={<AboutCityOfSarnia />} />
+                  <Route path="/what-we-do" element={<WhatWeDo />} />
+                  <Route path="/board-of-directors-and-other-function" element={<BoardOfDirectors />}/>
+                  <Route path="/education" element={<Education />} />
+                  <Route path="/aarti-audios" element={<AartiAudios />} />
+                  <Route path="/shs-bhajan-book" element={<SHSBhajanBook />} />
+                  <Route path="/login" element={<Login />} />
+
+
+                  <Route path="/donation" element={<Donation />} />
                 </Routes>
               </main>
               <Footer />

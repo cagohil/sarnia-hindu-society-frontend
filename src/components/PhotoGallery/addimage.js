@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import imageContext from "../../context/imageContext";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Button from 'react-bootstrap/Button';
@@ -12,8 +11,7 @@ export default function AddImage() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [photo, setPhoto] = React.useState({ title: "", image: "" });
-  // const host = "http://localhost:8000";
-  const host = "https://sarniahindusociety.org:8000";
+  const host = "https://sarnia.vercel.app";
 
 
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import './fonts/Georgia.ttf';
+import './assets/fonts/Georgia.ttf';
 import App from './App';
 import { HashRouter } from 'react-router-dom'
 import reportWebVitals from './reportWebVitals';
