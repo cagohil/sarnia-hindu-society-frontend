@@ -91,7 +91,7 @@ const Home = () => {
           {/* Diwali Link btn end here*/}
 
           <Events />
-          <ContactForm />
+          <ContactForm contactUsForm={false}  MembershipAndDonationCards={true}/>
         </div>
       </div>
     </div>

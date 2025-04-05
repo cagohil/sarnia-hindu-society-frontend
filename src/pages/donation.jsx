@@ -24,26 +24,17 @@ const donation = () => {
                     occasional rental income, and specially solicited donations.
                     The money for major capital projects comes mostly from
                     generous donations by several members.
-                    <div className='mt-2 mb-1' style={{color:'#690000'}}>
-                    <strong >Mandir Rentals:</strong>
-                    </div>
-                    Any SHS member, or another organization represented by an SHS
-                    member, can rent the Mandir for a day with a pre-determined
-                    nominal payment, and per established rules & guidelines. The
-                    amount covers the direct immediate Mandir expenses, and the
-                    remainder goes towards funds for long-term Mandir
-                    expenditures. A copy of the latest Rental Agreement must be
-                    obtained by the Renter from the SHS President or designate,
-                    reviewed, discussed, signed and returned alongwith the
-                    applicable rental & deposit amount cheques, and pre-approved
-                    by the Board before being effective.
                   </p>
+
+                  <a
+                  target="_blank"
+                  href="https://www.zeffy.com/fundraising/donations-to-shs--2025"
+                  rel="noopener noreferrer"
+                >
+                  <button className="join-now-btn">DONATE NOW</button>
+                </a>
                 </div>
-                <div className="mt-2 mb-1" style={{ color: "#690000" }}>
-                    Donations and Membership by e-transfer to <br />
-                    <strong><a href="mailto:sarniahindusociety@yahoo.ca"><i className="fa-solid fa-envelope mr-1"></i>sarniahindusociety@yahoo.ca</a></strong>
-                    <br />
-                </div>
+                
               </div>
             </div>
           </div>

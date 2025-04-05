@@ -14,18 +14,19 @@ import Education from "./pages/education";
 import AartiAudios from "./pages/aarti-audios";
 import SHSBhajanBook from "./pages/shs-bhajan-book"
 import Schedule from "./pages/monthly-mandir-schedule";
+import MandirRentals from "./pages/mandir-rentals";
 
 
 import Events from "./pages/upcoming-events";
 import Login from "./pages/login";
 import Donation from "./pages/donation";
 import Contact from "./pages/contact";
+import Membership from "./pages/membership";
 
 // Browser Router
 import { Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Membership from "./components/Membership/membership";
 
 
 import EventState from "./context/event/EventState";
@@ -60,6 +61,8 @@ function App() {
                   <Route path="/education" element={<Education />} />
                   <Route path="/aarti-audios" element={<AartiAudios />} />
                   <Route path="/shs-bhajan-book" element={<SHSBhajanBook />} />
+                  <Route path="/mandir-rentals" element={<MandirRentals />} />
+
                   <Route path="/login" element={<Login />} />
 
 

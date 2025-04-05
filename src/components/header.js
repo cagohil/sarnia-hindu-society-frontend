@@ -82,6 +82,12 @@ const Header = () => {
               <LinkContainer  to="/education">
               <NavDropdown.Item ><i className="fa-solid fa-angle-right pr-2"></i>Education</NavDropdown.Item>
               </LinkContainer>
+
+              <LinkContainer  to="/gallery">
+              <NavDropdown.Item ><i className="fa-solid fa-angle-right pr-2"></i>Photo Gallery</NavDropdown.Item>
+              </LinkContainer>
+
+
               <LinkContainer  to="/aarti-audios">
               <NavDropdown.Item ><i className="fa-solid fa-angle-right pr-2"></i>Aarti Audios</NavDropdown.Item>
               </LinkContainer>
@@ -90,8 +96,8 @@ const Header = () => {
               </LinkContainer>
               </NavDropdown>
               <LinkContainer to="/membership"><Nav.Link className='linktwo'>Membership</Nav.Link></LinkContainer>
-              <LinkContainer to="/gallery"><Nav.Link className='linktwo'>Photo Gallery</Nav.Link></LinkContainer>
               <LinkContainer to="/donation"><Nav.Link className='linktwo'>Donation</Nav.Link></LinkContainer>
+              <LinkContainer to="/mandir-rentals"><Nav.Link className='linktwo'>Mandir Rentals</Nav.Link></LinkContainer>
               <LinkContainer to="/contact"><Nav.Link className='linktwo'>Contact</Nav.Link></LinkContainer>
               {!localStorage.getItem('adminToken')?
               <LinkContainer to="/login"><Nav.Link>Login</Nav.Link></LinkContainer>
@@ -101,7 +107,7 @@ const Header = () => {
           </Navbar.Collapse>
         </Navbar></Container>
         
-      <div className='navbar2' style={{ ...navbarStyles, top: visible ? '-520px' : '0' }}>
+      {/* <div className='navbar2' style={{ ...navbarStyles, top: visible ? '-520px' : '0' }}>
       <Container ><Navbar expand="lg">
         <Navbar.Brand to="/"><img alt='' data-aos="zoom-in-down" src={logo} style={{width:'80px'}}/></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -125,9 +131,16 @@ const Header = () => {
               <LinkContainer onClick={handleClick} to="/schedule">
               <NavDropdown.Item ><i className="fa-solid fa-angle-right pr-2"></i>Monthly Mandir Schedule</NavDropdown.Item>
               </LinkContainer>
+
               <LinkContainer onClick={handleClick} to="/education">
               <NavDropdown.Item ><i className="fa-solid fa-angle-right pr-2"></i>Education</NavDropdown.Item>
               </LinkContainer>
+
+              <LinkContainer onClick={handleClick} to="/mandir-rentals">
+              <NavDropdown.Item ><i className="fa-solid fa-angle-right pr-2"></i>Mandir Rentals</NavDropdown.Item>
+              </LinkContainer>
+
+
               <LinkContainer onClick={handleClick} to="/aarti-audios">
               <NavDropdown.Item ><i className="fa-solid fa-angle-right pr-2"></i>Aarti Audios</NavDropdown.Item>
               </LinkContainer>
@@ -137,8 +150,8 @@ const Header = () => {
               </NavDropdown>
 
               <LinkContainer onClick={handleClick} to="/membership"><Nav.Link className='linktwo'>Membership</Nav.Link></LinkContainer>
-              <LinkContainer onClick={handleClick} to="/gallery"><Nav.Link className='linktwo'>Photo Gallery</Nav.Link></LinkContainer>
               <LinkContainer onClick={handleClick} to="/donation"><Nav.Link className='linktwo'>Donation</Nav.Link></LinkContainer>
+              <LinkContainer onClick={handleClick} to="/gallery"><Nav.Link className='linktwo'>Photo Gallery</Nav.Link></LinkContainer>
               <LinkContainer onClick={handleClick} to="/contact"><Nav.Link className='linktwo'>Contact</Nav.Link></LinkContainer>
               {!localStorage.getItem('adminToken')?
               <LinkContainer to="/login"><Nav.Link>Login</Nav.Link></LinkContainer>
@@ -146,7 +159,7 @@ const Header = () => {
             </Nav>
           </Navbar.Collapse>
         </Navbar></Container>
-      </div>
+      </div> */}
     </div>
     
   );

@@ -43,7 +43,7 @@ const membershipinfo = () => {
               </div>
                 <div className="mt-2 mb-1" style={{ color: "#690000" }}>
                     Membership and Donations by e-transfer to <br />
-                    <strong><a href="mailto:sarniahindusociety@yahoo.ca"><i className="fa-solid fa-envelope mr-1"></i>sarniahindusociety@yahoo.ca</a></strong>
+                    <strong><a href="mailto:info@sarniahindusociety.com"><i className="fa-solid fa-envelope mr-1"></i>info@sarniahindusociety.com</a></strong>
                     <br />
                 </div>
             </div>

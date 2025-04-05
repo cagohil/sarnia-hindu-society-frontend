@@ -1,59 +1,47 @@
-//Events.js (main file)
-import React, { useContext, useState, useEffect } from "react";
-import AddEditEvent from "./AddEditEvent";
-import EventItem from "./EventItem";
-import eventContext from "../../context/event/EventContext";
+import React, { useContext, useEffect, useState } from "react";
+import MemberItem from "./MemberItem";
+import AddEditMember from "./AddEditMember";
+import memberContext from "../../context/member/MemberContext";
 import deepa from "../../assets/images/deepa.png";
 import Loader from "../Loader";
 
-const Events = () => {
-  const { event, getEvent, addEvent, editEvent, deleteEvent, loading } =
-    useContext(eventContext);
+const Members = () => {
+  const { member, getMember, addMember, editMember, deleteMember, loading } = useContext(memberContext);
 
   const [showModal, setShowModal] = useState(false);
   const [isEdit, setIsEdit] = useState(false);
-  const [currentEvent, setCurrentEvent] = useState(null);
+  const [currentMember, setCurrentMember] = useState(null);
 
   useEffect(() => {
-    getEvent();
+    getMember();
   }, []);
 
   const handleSave = (data) => {
-    if (isEdit) {
-      editEvent(
-        data._id,
-        data.title,
-        data.description,
-        data.time,
-        data.date,
-        data.address
-      );
+    if (isEdit && currentMember) {
+      // Pass the ID directly instead of relying on currentMember in closure
+      editMember(data._id, data.name, data.designation);
     } else {
-      addEvent(
-        data.title,
-        data.description,
-        data.time,
-        data.date,
-        data.address
-      );
+      addMember(data.name, data.designation);
     }
     setShowModal(false);
   };
 
-  const handleEdit = (event) => {
-    setCurrentEvent(event);
+  const handleEdit = (member) => {
+    setCurrentMember(member);
     setIsEdit(true);
     setShowModal(true);
   };
 
   const handleAdd = () => {
-    setCurrentEvent(null);
+    setCurrentMember(null);
     setIsEdit(false);
     setShowModal(true);
   };
 
   const handleDelete = (id) => {
-    deleteEvent(id);
+    if (window.confirm("Are you sure you want to delete this member?")) {
+      deleteMember(id);
+    }
   };
 
   return (
@@ -61,57 +49,48 @@ const Events = () => {
       <div style={{ maxWidth: "1400px", margin: "auto" }}>
         <div className="container-fluid pl-0 pr-0 pt-3 pb-3">
           <div className="inpagecontent mb-3">
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                maxWidth: "500px",
-                margin: "auto",
-              }}
-            >
+            <div style={{ display: "flex", justifyContent: "space-between", maxWidth: "500px", margin: "auto" }}>
               <img src={deepa} style={{ width: "40px" }} alt="decorative" />
-              <h1 className="headclass mb-0 mt-1 text-center">
-                Upcoming Events
-              </h1>
+              <h1 className="headclass mb-0 mt-1 text-center">List of Board Members</h1>
               <img src={deepa} style={{ width: "40px" }} alt="decorative" />
             </div>
           </div>
           <div className="row">
             {loading && <Loader />}
-            {!loading && event.length === 0 && (
+            {!loading && member.length === 0 && (
               <div className="col-12 text-center">
-                <p>No events found. Please check back later!</p>
+                <p>No members found. Please check back later!</p>
               </div>
             )}
             {!loading &&
-              event.length > 0 &&
-              event.map((ev) => (
-                <EventItem
-                  key={ev._id}
-                  event={ev}
+              member.length > 0 &&
+              member.map((mem) => (
+                <MemberItem
+                  key={mem._id}
+                  member={mem}
                   handleEdit={handleEdit}
                   handleDelete={handleDelete}
                 />
               ))}
           </div>
           {localStorage.getItem("adminToken") && (
-            <div className="text-right">
+            <div className="text-right mt-3">
               <button className="btn btn-primary" onClick={handleAdd}>
-                Add Event
+                Add Member
               </button>
             </div>
           )}
         </div>
       </div>
-      <AddEditEvent
+      <AddEditMember
         show={showModal}
         handleClose={() => setShowModal(false)}
         isEdit={isEdit}
-        currentEvent={currentEvent}
+        currentMember={currentMember}
         handleSave={handleSave}
       />
     </div>
   );
 };
 
-export default Events;
+export default Members;

@@ -1,4 +1,5 @@
 import React from "react";
+import Membership from "../components/Membership/index";
 
 const boardOfDirectors = () => {
   return (
@@ -43,6 +44,8 @@ const boardOfDirectors = () => {
                   </p>
                 </div>
               </div>
+
+              <Membership />
             </div>
           </div>
         </div>

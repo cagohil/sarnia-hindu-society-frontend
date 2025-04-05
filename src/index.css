@@ -36,7 +36,7 @@ body {
 
 .imageBox{
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
 }
 .imageHome{
@@ -468,13 +468,20 @@ border-top: 1px solid #ad603a;
 
   .linktwo{
     margin: 0px 20px 0px 0px !important;
+    color: #333 !important;
   }
 
   .linkOne{
     margin: 0px 20px 0px 20px !important;
+    color: #333 !important;
   }
 
   a{
+    color: #0056b3 !important;
+    text-decoration: underline;
+  }
+
+  footer a{
     color: #333 !important;
   }
   .card-img{
@@ -717,6 +724,10 @@ main {
   background: rgba(255,255,255,0.8) !important;
 }
 
+.mandir-rental-steps li {
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
 
 @media screen and (max-width: 575px) {
   .membercard{

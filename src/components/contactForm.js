@@ -8,9 +8,7 @@ import image1 from "../assets/images/contact-image-1.jpg";
 import image2 from "../assets/images/contact-image-2.png";
 import { Link } from "react-router-dom";
 
-// eslint-disable-next-line no-unused-vars
-
-const ContactForm = () => {
+const ContactForm = ({ contactUsForm = true, MembershipAndDonationCards = false }) => {
   AOS.init();
   const form = useRef();
 
@@ -34,17 +32,18 @@ const ContactForm = () => {
         },
         (error) => {
           console.log(error.text);
-          toast.error("please try agin");
+          toast.error("Please try again.");
         }
       );
   };
 
   return (
-    <div style={{ fontFamily: "Georgia, Times New Roman, Times, seri" }}>
+    <div style={{ fontFamily: "Georgia, Times New Roman, Times, serif" }}>
       <div className="container-fluid contact-container pt-0 pl-0 pr-0">
         <div style={{ maxWidth: "1400px", margin: "auto" }}>
-          <div className="row ">
-            <div className="col-lg-4 m-0 col-xl-4 p-0 col-md-12 col-margin">
+          <div className="row">
+            {/* Mandir Info Section */}
+            <div className="col-lg-3 m-0 col-xl-3 p-0 col-md-12 col-margin">
               <div className="container">
                 <div className="inpagecontent">
                   <div
@@ -77,9 +76,9 @@ const ContactForm = () => {
                         style={{ color: "#690000", fontSize: "17px" }}
                       >
                         <strong>
-                          <a href="mailto:sarniahindusociety@yahoo.ca">
+                          <a href="mailto:info@sarniahindusociety.com">
                             <i className="fa-solid fa-envelope mr-2"></i>
-                            sarniahindusociety@yahoo.ca
+                            info@sarniahindusociety.com
                           </a>
                         </strong>
                       </div>
@@ -96,11 +95,12 @@ const ContactForm = () => {
                         </strong>
                       </div>
                     </div>
-                    <div></div>
                   </div>
                 </div>
               </div>
             </div>
+
+            {/* Image Carousel Section */}
             <div className="col-lg-4 col-xl-4 imageBox pr-0 pl-0 col-md-12 col-margin">
               <Carousel fade className="slide-image-contact">
                 <Carousel.Item>
@@ -119,10 +119,12 @@ const ContactForm = () => {
                 </Carousel.Item>
               </Carousel>
             </div>
-            <div className="col-lg-4 col-xl-4 m-0 p-0 col-md-12 col-margin">
-              <div className="container">
-                <div className="inpagecontent4">
-                  <div className="">
+
+            {/* Contact Us Form Section */}
+            {contactUsForm && (
+              <div className="col-lg-5 col-xl-5 m-0 p-0 col-md-12 col-margin">
+                <div className="container">
+                  <div className="inpagecontent4">
                     <div className="text-center">
                       <p className="headclass">CONNECT WITH US</p>
                       <form ref={form} onSubmit={sendEmail}>
@@ -165,19 +167,64 @@ const ContactForm = () => {
                           type="submit"
                           value="Send"
                         >
-                          {" "}
-                          Submit{" "}
+                          Submit
                         </button>
                       </form>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            )}
+
+
+
+            {/* Membership and Donation cards Section */}
+            {MembershipAndDonationCards && (
+              <div className="col-lg-5 col-xl-5 m-0 p-0 col-md-12 col-margin">
+                <div className="container">
+                <div className="inpagecontentsmall inpagecontent" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1000">
+                <div>
+                  <p>
+                  It is through the kindness of devotees like you that we are able to keep our traditions alive and make a positive impact on the lives of many.
+                  </p>
+
+                  <a
+                  target="_blank"
+                  href="https://www.zeffy.com/fundraising/donations-to-shs--2025"
+                  rel="noopener noreferrer"
+                >
+                  <button className="join-now-btn-small join-now-btn">DONATE NOW</button>
+                </a>
+                </div>
+                
+              </div>
+
+
+              <div className="inpagecontentsmall inpagecontent" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1000">
+                <div>
+                  <p>
+                  *Being part of SHS mandir community can be a deeply rewarding experience, offering both spiritual growth and a sense of belonging. *
+                  </p>
+
+                  <a
+                  target="_blank"
+                  href="https://www.zeffy.com/ticketing/sarnia-hindu-society-memberships--2024"
+                  rel="noopener noreferrer"
+                >
+                  <button className="join-now-btn-small join-now-btn">JOIN US</button>
+                </a>
+                </div>
+                
+              </div>
+                </div>
+              </div>
+            )}
+
           </div>
         </div>
       </div>
     </div>
   );
 };
+
 export default ContactForm;

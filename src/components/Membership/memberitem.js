@@ -1,109 +1,28 @@
-import React, { useContext } from "react";
-import memberContext from "../../context/member/MemberContext";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import "aos/dist/aos.css";
+import React from "react";
 
-const host = "https://sarnia.vercel.app";
-
-
-
-function MemberItem(props) {
-  const { members, updateMember } = props;
-  const context = useContext(memberContext);
-  const { deleteMember } = context;
-
-
-  const imageCardStyle = {
-    minHeight: '230px',
-    overflow: "hidden",
-    float: "initial",
-    backgroundImage: `url(${host}/resources/memberimage/${members.memberimage})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center"
-  }
-
-
-  const eventDateMonthStyle = {
-    display: "inline-block",
-    margin: "15px",
-    padding: "5px 15px",
-    borderRadius: "4px",
-    boxShadow: "5px 3px 15px rgb(0 0 0 / 20%)",
-    backgroundColor: "rgb(105, 0, 0)",
-  }
-
-  const eventDateStyle = {
-    fontSize: "14px",
-    fontWeight: "500",
-    color: "#ffffff"
-  }
-
-  const BtnStyle = {
-    bottom: "0px",
-    padding: "0px 0px 0px 0px",
-    width:"100%",
-  }
-
-
-  const handleDeleteBtn = (e) => {
-    try {
-      e.preventDefault()
-      deleteMember(members._id);
-      toast.success("Delete Successfully!");
-    } catch (error) {
-      toast.error('Internal Server Error')
-    }
-  }
-
-  const handleEditBtn = () =>{
-    updateMember(members);
-  }
-
-
+const MemberItem = ({ member, handleEdit, handleDelete }) => {
   return (
-    <div className="col-sm-12 col-md-3 col-lg-3 " style={{fontFamily: "roboto, sans-serif"}}>
-      <div >
-        <div className="mb-3 membercard" data-aos="flip-right" data-aos-easing="linear" data-aos-duration="1000">
-          {/* <div className="imagecard" style={{ ...imageCardStyle }}>
-            <div className="text-center" style={{ ...eventDateMonthStyle }}>
-              <div className="date" style={{ ...eventDateStyle }}><p className="mb-0" style={{ wordWrap: "break-word"}}>{members.designation}</p>
-              </div>
-            </div>
-          </div> */}
-          <div className="data membaerdetail ">
-            <div className="name" style={{ color: "#690000", fontSize: "22px", fontWeight: "700" }}>
-              <strong>{members.name}</strong>
-            </div>
-            <div className="about">
-              <p className="mb-0" style={{ wordWrap: "break-word", color: "#555555" }}>{members.designation}</p>
-            </div>
-
-            {/* {!localStorage.getItem('adminToken') ? <div></div>
-              : <div className="mt-3" style={{ display: "flex" }}>
-                <Link style={{ cursor: "pointer" }}
-                  onClick={(e) => {
-                    e.preventDefault()
-                    deleteMember(members._id);
-                    toast.success("Delete Successfully!");
-                  }}
-                  className="mr-3"><i className="mr-1 fa-solid fa-trash-can"></i>Delete</Link>
-              </div>} */}
-
+    <div className="col-sm-4 mb-3">
+      <div style={{ boxShadow: "2px 2px 8px #666", width: "100%" }}>
+        <div className="data inpageevent">
+          <div style={{ color: "#690000", fontSize: "25px", fontWeight: "700" }}>
+            <strong>{member.name}</strong>
           </div>
-          {!localStorage.getItem('adminToken') ?
-              <div></div>
-              : <>
-              <div className="btn-group" style={{ ...BtnStyle }} role="group" aria-label="Basic mixed styles example">
-                  <button type="button" onClick={handleEditBtn} style={{ borderRadius:'0' }} className="btn btn-warning"><i  className="fa-solid fa-pen-to-square"></i></button>
-
-                  <button type="button" onClick={handleDeleteBtn} style={{ borderRadius:'0' }} className="btn btn-danger"><i className="fa-solid fa-trash-can "></i></button>
-                </div></>}
-
+          <p>{member.designation}</p>
         </div>
+        {localStorage.getItem("adminToken") && (
+          <div className="btn-group w-100">
+            <button className="btn btn-warning" onClick={() => handleEdit(member)}>
+              <i className="fa-solid fa-pen-to-square"></i> Edit
+            </button>
+            <button className="btn btn-danger" onClick={() => handleDelete(member._id)}>
+              <i className="fa-solid fa-trash-can"></i> Delete
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
-}
+};
 
 export default MemberItem;
