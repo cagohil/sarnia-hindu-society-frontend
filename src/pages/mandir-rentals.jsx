@@ -3,7 +3,7 @@ import React from "react";
 const MandirRentals = () => {
   return (
     <div style={{ fontFamily: "Georgia, Times New Roman, Times, serif" }}>
-      <div className="container pt-3 pb-3">
+      <div className="mandir-rental-sec container pt-3 pb-3">
         <div
           className="inpagecontent"
           data-aos="zoom-in"
@@ -17,11 +17,11 @@ const MandirRentals = () => {
               private individuals or organizations represented by an SHS member,
               to rent our serene temple premises for a day. Perfect for special
               events, ceremonies, or gatherings, the Mandir is available for a
-              nominal pre-determined fee, in accordance with our established
-              rules and guidelines. This fee offsets immediate operational
-              expenses, with any surplus directed toward long-term maintenance
-              and enhancements of the facility. To initiate a rental, please
-              follow the steps below or contact us at{" "}
+              nominal fee of $100 (member) or $150 (non-member), in accordance
+              with our established rules and guidelines. This fee offsets
+              immediate operational expenses, with any surplus directed toward
+              long-term maintenance and enhancements of the facility. To
+              initiate a rental, please follow the steps below or contact us at{" "}
               <a href="mailto:pay@sarniahindusociety.com">
                 pay@sarniahindusociety.com
               </a>{" "}
@@ -31,13 +31,14 @@ const MandirRentals = () => {
             <h4 className="mt-4 mb-2">Rental Process:</h4>
             <ol className="mandir-rental-steps">
               <li>
-                <strong>Complete the Application:</strong> Download the latest{" "}
+                <strong>Complete the Application:</strong>
+                {/* Download the latest */}{" "}
                 <a
                   href="/assets/SHS-Mandir-Rental.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Rental Agreement
+                  Download this Rental Agreement
                 </a>
                 , review, sign, and email a scanned copy to{" "}
                 <a href="mailto:pay@sarniahindusociety.com">

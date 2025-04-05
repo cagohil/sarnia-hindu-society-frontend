@@ -55,7 +55,7 @@ const ContactForm = ({ contactUsForm = true, MembershipAndDonationCards = false 
                       paddingBottom: "5px",
                     }}
                   >
-                    <div>
+                    <div className="mandir-info-sec">
                       <div className="text-start">
                         <p className="headclass">MANDIR INFO</p>
                       </div>

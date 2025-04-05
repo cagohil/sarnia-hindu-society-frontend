@@ -481,6 +481,25 @@ border-top: 1px solid #ad603a;
     text-decoration: underline;
   }
 
+  .mandir-rental-sec a{
+    text-decoration: underline;
+  }
+  
+
+  .mandir-rental-sec a:hover{
+    text-decoration: none;
+  }
+
+  .mandir-info-sec a{
+    color: #333 !important;
+    text-decoration: none;
+  }
+
+  .mandir-info-sec a:hover{
+    color: #0056b3 !important;
+    text-decoration: underline;
+  }
+
   footer a{
     color: #333 !important;
   }
