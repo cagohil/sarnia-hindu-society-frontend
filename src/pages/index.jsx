@@ -5,10 +5,14 @@ import Carousel from "react-bootstrap/Carousel";
 import image1 from "../assets/images/home-image-1.jpg";
 import image2 from "../assets/images/home-image-2.png";
 import image3 from "../assets/images/home-image-3.png";
+import EventImage from "../assets/images/event-img.jpeg";
 
 const Home = () => {
   const DiwaliLink =
     "https://www.zeffy.com/ticketing/8a3c5201-fdd2-4dc3-9a8d-79540d29625a";
+
+  const EventLink =
+    "https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FToronto&showPrint=0&src=c2FybmlhaGluZHVzb2NpZXR5QGdtYWlsLmNvbQ&color=%23F09300";
 
   return (
     <div style={{ fontFamily: "Georgia, Times New Roman, Times, seri" }}>
@@ -68,7 +72,6 @@ const Home = () => {
                         operations. Membership subscriptions and donations are
                         income tax deductible.
                       </p>
-
                     </div>
                   </div>
                 </div>
@@ -76,7 +79,7 @@ const Home = () => {
             </div>
           </div>
 
-         {/* Diwali Link btn start here*/}
+          {/* Diwali Link btn start here*/}
           {/* <div className="inpagecontent mb-3 mt-3">
             <a href={DiwaliLink} className="link-btn">
               <img src={deepa} className="deepa" alt="deepa" />
@@ -90,8 +93,29 @@ const Home = () => {
           </div> */}
           {/* Diwali Link btn end here*/}
 
-          <Events />
-          <ContactForm contactUsForm={false}  MembershipAndDonationCards={true}/>
+          {/* <Events /> */}
+
+          <div className="traditional-calendar-widget">
+            <h3 className="calendar-title">Upcoming Events Calendar</h3>
+            <a
+              href={EventLink}
+              rel="noreferrer"
+              target="_blank"
+              className="calendar-link"
+            >
+              <img
+                src={EventImage}
+                alt="Click to view our event calendar"
+                className="calendar-thumbnail"
+              />
+              <span className="click-prompt">Click to View Calendar →</span>
+            </a>
+          </div>
+
+          <ContactForm
+            contactUsForm={false}
+            MembershipAndDonationCards={true}
+          />
         </div>
       </div>
     </div>

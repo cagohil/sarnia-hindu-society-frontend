@@ -169,4 +169,62 @@
           -webkit-box-shadow: 2px 2px 8px #666;
           box-shadow: 2px 2px 8px #666;          font-size: 14px;
         }
+
         
+        .traditional-calendar-widget {
+          margin: 20px auto;
+          max-width: 320px;
+          border: 1px solid #ddd;
+          padding: 15px;
+          background: #fff;
+          border-radius: 4px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+          text-align: center;
+        }
+        
+        .calendar-title {
+          color: #333;
+          margin-bottom: 12px;
+          font-size: 18px;
+          font-weight: 600;
+          border-bottom: 1px solid #eee;
+          padding-bottom: 8px;
+        }
+        
+        .calendar-link {
+          display: block;
+          text-decoration: none;
+          position: relative;
+        }
+        
+        .calendar-thumbnail {
+          width: 100%;
+          height: auto;
+          border: 1px solid #e0e0e0;
+          transition: border-color 0.2s;
+        }
+        
+        .calendar-link:hover .calendar-thumbnail {
+          border-color: #F09300;
+        }
+        
+        .click-prompt {
+          display: block;
+          background-color: #F09300;
+          color: white;
+          padding: 8px 12px;
+          margin-top: 8px;
+          border-radius: 4px;
+          font-weight: 500;
+          transition: background-color 0.2s;
+        }
+        
+        .calendar-link:hover .click-prompt {
+          background-color: #e07d00;
+          text-decoration: underline;
+        }
+        
+        .calendar-link:active .click-prompt {
+          transform: translateY(1px);
+          background-color: #d17000;
+        }
