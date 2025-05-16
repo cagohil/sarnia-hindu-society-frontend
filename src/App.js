@@ -22,6 +22,7 @@ import Login from "./pages/login";
 import Donation from "./pages/donation";
 import Contact from "./pages/contact";
 import Membership from "./pages/membership";
+import SanatanKids from "./pages/sanatan-kids";
 
 // Browser Router
 import { Routes, Route } from "react-router-dom";
@@ -49,7 +50,8 @@ function App() {
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/contact" element={<Contact />} />
-                  <Route path="/events" element={<Events />} />
+                  {/* <Route path="/events" element={<Events />} /> */}
+                  <Route path="/sanatan-kids" element={<SanatanKids />} />
                   <Route path="/schedule" element={<Schedule />} />
                   <Route path="/membership" element={<Membership />} />
                   <Route path="/gallery" element={<PhotoGallery />} />

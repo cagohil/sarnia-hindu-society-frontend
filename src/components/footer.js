@@ -65,9 +65,15 @@ const Footer = () => {
                     </Link>
                   </li>
 
-                  <li className="li-footer p1">
+                  {/* <li className="li-footer p1">
                     <Link onClick={handleClick} to="/events" className="a-fff">
                       <i className="fa-solid fa-angle-right"></i> Events
+                    </Link>
+                  </li> */}
+
+                  <li className="li-footer p1">
+                    <Link onClick={handleClick} to="/sanatan-kids" className="a-fff">
+                      <i className="fa-solid fa-angle-right"></i> Sanatan Kids
                     </Link>
                   </li>
                   {!localStorage.getItem("adminToken") ? (

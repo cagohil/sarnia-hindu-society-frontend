@@ -1,4 +1,3 @@
-//Events.js (main file)
 import React, { useContext, useState, useEffect } from "react";
 import AddEditEvent from "./AddEditEvent";
 import EventItem from "./EventItem";
