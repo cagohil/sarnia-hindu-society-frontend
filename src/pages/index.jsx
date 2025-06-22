@@ -82,7 +82,7 @@ const Home = () => {
           </div>
 
           {/* Yoga Registration Button */}
-          <div className="yoga-day-container" style={{
+          {/* <div className="yoga-day-container" style={{
             margin: "40px auto",
             maxWidth: "900px",
             textAlign: "center",
@@ -94,7 +94,6 @@ const Home = () => {
             position: "relative",
             overflow: "hidden"
           }}>
-            {/* Decorative elements */}
             <div style={{
               position: "absolute",
               top: "-50px",
@@ -115,7 +114,6 @@ const Home = () => {
               borderRadius: "50%"
             }}></div>
 
-            {/* Traditional mandala border */}
             <div style={{
               position: "absolute",
               top: "10px",
@@ -136,8 +134,7 @@ const Home = () => {
               padding: "20px",
               zIndex: "2"
             }}>
-              {/* Yoga pose SVG icons */}
-              {/* <div style={{
+              <div style={{
                 display: "flex",
                 justifyContent: "space-between",
                 width: "100%",
@@ -162,7 +159,7 @@ const Home = () => {
                     <path d="M14 8L10 12" stroke="#B30000" stroke-width="1.5" stroke-linecap="round" />
                   </svg>
                 </div>
-              </div> */}
+              </div>
 
               <h3 style={{
                 color: "#B30000",
@@ -245,7 +242,6 @@ const Home = () => {
                 </a>
               </div>
 
-              {/* Decorative lotus SVG at bottom */}
               <div style={{
                 width: "80px",
                 height: "80px",
@@ -265,7 +261,7 @@ const Home = () => {
                 </svg>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Diwali Link btn start here*/}
           {/* <div className="inpagecontent mb-3 mt-3">
