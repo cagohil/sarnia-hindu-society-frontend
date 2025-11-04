@@ -6,6 +6,8 @@ import image1 from "../assets/images/home-image-1.jpg";
 import image2 from "../assets/images/home-image-2.png";
 import image3 from "../assets/images/home-image-3.png";
 import EventImage from "../assets/images/event-img.jpeg";
+import NavratriTicketCard from "../components/TicketCard";
+import DiwaliEvent from "../components/DiwaliTicketCard";
 
 const Home = () => {
   const DiwaliLink =
@@ -277,7 +279,17 @@ const Home = () => {
           </div> */}
           {/* Diwali Link btn end here*/}
 
+          {/* navrtri card start here */}
+
+          {/* <NavratriTicketCard /> */}
+
+          {/* navrtri card end */}
+
+          {/* <NavratriTicketCard /> */}
+
           {/* <Events /> */}
+
+          <DiwaliEvent />
 
           <div className="traditional-calendar-widget">
             <h3 className="calendar-title">Upcoming Events Calendar</h3>
