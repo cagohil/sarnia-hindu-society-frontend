@@ -289,7 +289,7 @@ const Home = () => {
 
           {/* <Events /> */}
 
-          <DiwaliEvent />
+          {/* <DiwaliEvent /> */}
 
           <div className="traditional-calendar-widget">
             <h3 className="calendar-title">Upcoming Events Calendar</h3>
